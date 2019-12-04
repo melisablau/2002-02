@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+<link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
+<title>CodePen - 2002-3</title>
+<style>
+  h1{
+  color:rgb(255,10,10);
+    font-size:500%;
+}
+  #mainList{
+    font-size:250%;
+  }
+  .odd{
+    background-color:rgba(250,255,0,0)
+}
+.even{
+  background-color:#FFFFA000;
+}
+.alist{
+  color:black;
+  font-style;bold;
+    font-size:25px;
+  background-image:url("https://www.discover-hope.com/wp-content/uploads/2019/09/How-to-Make-Hygiene-Tasks-Fun.png")
+}
+button {
+  background-color:rgb(255,0,255);
+  border: none;
+  color: black;
+  font-style:bold;
+  padding: 15px 32px;
+  text-align: center;
+ text-decoration: underline;
+  display: inline-block;
+  font-size: 16px;
+  border-width:10px;
+  border-style:double;
+  
+   
+}
+</style>
+</head>
+<body translate="no">
+<h1 id="mainList">To do list</h1>
+<ul id="myList" class="alist">
+<li class="odd">brush teeth</li>
+<li class="even">brush teeth</li>
+</ul>
+<button id="odd">Add</button>
+<input id="item">
+<script id="rendered-js">
+      console.clear();
+console.log("hello world");
+
+const addBtn = document.getElementById("odd");
+
+addBtn.addEventListener('click',addItem);
+
+function addItem(e){
+  const theItem = document.getElementById("item").value;
+  console.log('add item',theItem);
+  
+  var node = document.createElement("li");
+var textnode = document.createTextNode(theItem);         
+node.appendChild(textnode);                            
+document.getElementById("myList").appendChild(node);
+
+}
+    </script>
+</body>
+</html>
